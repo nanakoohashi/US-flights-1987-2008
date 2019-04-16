@@ -46,3 +46,9 @@ import seaborn as sb
 import calendar
 
 %matplotlib inline
+
+# In[2]:
+df_2008 = pd.read_csv('2008.csv')
+
+
+df_2008 = pd.read_csv('2008_Sampled_100000.csv')
