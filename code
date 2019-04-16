@@ -50,5 +50,6 @@ import calendar
 # In[2]:
 df_2008 = pd.read_csv('2008.csv')
 
-
-df_2008 = pd.read_csv('2008_Sampled_100000.csv')
+# In[3]:
+# Due to large file size, take a sample to more efficiently analyze trends in data
+df_2008.sample(100000).to_csv('2008_sampled_100000.csv')
