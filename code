@@ -61,3 +61,14 @@ df_2008 = pd.read_csv('2008_Sampled_100000.csv')
 print(df_2008.shape)
 print(df_2008.dtypes)
 print(df_2008.head(10))
+
+# In[6]:
+# Making sure that we're converting numbers to days/months correctly
+days = list(calendar.day_name)
+days_abbr = list(calendar.day_abbr)
+print(days, days_abbr)
+month = list(calendar.month_name)
+month_abbr = list(calendar.month_abbr)
+print(month, month_abbr)
+print(calendar.month_abbr[1])
+exit()
