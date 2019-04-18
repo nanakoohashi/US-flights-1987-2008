@@ -59,3 +59,4 @@ df_2008 = pd.read_csv('2008_Sampled_100000.csv')
 
 # In[5]
 print(df_2008.shape)
+print(df_2008.dtypes)
