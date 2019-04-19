@@ -53,6 +53,7 @@ df_2008 = pd.read_csv('2008.csv')
 # In[3]:
 print(df_2008.shape)
 print(df_2008.dtypes)
+print(df_2008.head(10))
 
 # In[4]:
 # Due to large file size, take a sample to more efficiently analyze trends in data
