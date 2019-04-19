@@ -78,4 +78,10 @@ print(month, month_abbr)
 print(calendar.month_abbr[1])
 exit()
 
-#
+# In[8]:
+# Calculating how many flights there are per month.
+df_2008s_month_value_counts = df_2008s.Month.value_counts().reset_index()
+df_2008s_month_value_counts.columns = ["Month", "Total_Flights"]
+df_2008s_month_value_counts = df_2008s_month_value_counts.sort_values(by=['Month'])
+df_2008s_month_value_counts['Month'] = df_2008s_month_value_counts['Month'].apply(lambda x: calendar.month_abbr[x])
+print(df_2008s_month_value_counts)
