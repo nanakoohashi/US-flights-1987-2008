@@ -3,7 +3,7 @@
 
 # # Flights Data Exploration
 # ## Preliminary Wrangling
-# This dataset reports flights in the United States, including carriers, arrival and departure delays, and reasons for delays, from 1987 to 2008.
+# >This dataset reports flights in the United States, including carriers, arrival and departure delays, and reasons for delays, from 1987 to 2008.
 # #### Variable descriptions
 
 # | --- | **Name** | **Description** |
@@ -67,6 +67,7 @@ print(df_2008s.shape)
 print(df_2008s.dtypes)
 print(df_2008s.head(10))
 
+# ## Univariate Exploration
 # In[7]:
 # Making sure that we're converting numbers to days/months correctly
 days = list(calendar.day_name)
