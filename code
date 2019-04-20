@@ -66,6 +66,7 @@ df_2008s = pd.read_csv('2008_Sampled_100000.csv')
 print(df_2008s.shape)
 print(df_2008s.dtypes)
 print(df_2008s.head(10))
+print(df_2008s.describe())
 
 # ## Univariate Exploration
 # In[7]:
