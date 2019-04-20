@@ -87,3 +87,11 @@ df_2008s_month_value_counts.columns = ["Month", "Total_Flights"]
 df_2008s_month_value_counts = df_2008s_month_value_counts.sort_values(by=['Month'])
 df_2008s_month_value_counts['Month'] = df_2008s_month_value_counts['Month'].apply(lambda x: calendar.month_abbr[x])
 print(df_2008s_month_value_counts)
+
+# In[9]:
+# Plot month value counts as bar plot
+df_2008s_month_value_counts.plot(kind='bar', x='Month', y='Total_Flights', color = 'teal', legend=False)
+plt.title("Total Flights by Month")
+plt.ylabel("Total Flights")
+plt.xlabel("")
+plt.show()
