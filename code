@@ -108,7 +108,7 @@ print(df_2008s_day_value_counts)
 
 
 # In[11]:
-# Plot month value counts as bar plot
+# Plot day value counts as bar plot
 df_2008s_day_value_counts.plot(kind='bar', x='DayOfWeek', y='Total_Flights', color = 'teal', legend=False)
 plt.title("Total Flights by Day of Week")
 plt.ylabel("Total Flights")
@@ -126,3 +126,12 @@ df_dvc2.columns = ["Day", "Total_Flights"]
 df_dvc2['Date'] = pd.to_datetime(df_dvc2['Day'], format='%Y/%m/%d')
 df_dvc2 = df_dvc2.sort_values(by=['Day'])
 print(df_dvc2)
+
+
+# In[13]:
+# Plot day value counts as bar plot
+df_dvc2.plot(kind='line', x='Day', y='Total_Flights', color = 'teal', legend=False, figsize = (16,10))
+plt.title("Total Flights by Day of Year")
+plt.ylabel("Total Flights")
+plt.xlabel("")
+plt.show()
