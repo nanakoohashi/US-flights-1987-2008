@@ -95,3 +95,12 @@ plt.title("Total Flights by Month")
 plt.ylabel("Total Flights")
 plt.xlabel("")
 plt.show()
+
+
+######### Day of the Week
+# Calculating how many flights there are per day of week.
+df_2008s_day_value_counts = df_2008s.DayOfWeek.value_counts().reset_index()
+df_2008s_day_value_counts.columns = ["DayOfWeek", "Total_Flights"]
+df_2008s_day_value_counts = df_2008s_day_value_counts.sort_values(by=['DayOfWeek'])
+df_2008s_day_value_counts['DayOfWeek'] = df_2008s_day_value_counts['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
+print(df_2008s_day_value_counts)
