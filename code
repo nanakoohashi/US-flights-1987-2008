@@ -114,3 +114,15 @@ plt.title("Total Flights by Day of Week")
 plt.ylabel("Total Flights")
 plt.xlabel("")
 plt.show()
+
+
+# In[12]:
+######### Day of the Year
+# Calculating how many flights there are per day of year.
+df_dvc2 = df_2008s
+df_dvc2['Date']=df_dvc2['Year'].astype(str)+'/'+df_dvc2['Month'].astype(str)+'/'+df_dvc2['DayofMonth'].astype(str)
+df_dvc2 = df_dvc2.Date.value_counts().reset_index()
+df_dvc2.columns = ["Day", "Total_Flights"]
+df_dvc2['Date'] = pd.to_datetime(df_dvc2['Day'], format='%Y/%m/%d')
+df_dvc2 = df_dvc2.sort_values(by=['Day'])
+print(df_dvc2)
