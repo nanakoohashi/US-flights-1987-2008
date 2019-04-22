@@ -135,3 +135,8 @@ plt.title("Total Flights by Day of Year")
 plt.ylabel("Total Flights")
 plt.xlabel("")
 plt.show()
+
+
+# In[14]:
+# Total Cancellations
+df_2008s.Cancelled.unique()
