@@ -140,3 +140,9 @@ plt.show()
 # In[14]:
 # Total Cancellations
 df_2008s.Cancelled.unique()
+
+
+# In[15]:
+df_cancelled = df_2008s['Cancelled'].value_counts()
+df_cancelled = df_cancelled.reset_index()
+df_cancelled
