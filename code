@@ -156,5 +156,10 @@ cancelled_percent
 
 # In[17]:
 df_cancelled.Cancelled.plot(kind= 'pie', labels = ['', cancelled_percent], figsize=(8,8))
-plt.title("Proportion of Flights that are Cancelled")
+plt.title("Percentage of Flights that are Cancelled")
 plt.ylabel("")
+
+
+# In[18]:
+# Mean Cancellations
+df_2008s.Cancelled.mean()
