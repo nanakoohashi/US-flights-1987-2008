@@ -172,3 +172,12 @@ df_2008s['CancellationCode'].value_counts()
 
 # In[20]:
 df_2008s['CancellationCode'].replace({'A': 'carrier', 'B': 'weather', 'C': 'NAS', 'D': 'security'}, inplace = True)
+
+
+# In[21]:
+# A = carrier, B = weather, C = NAS, D = security
+df_2008s['CancellationCode'].value_counts().plot(kind= 'bar', color = 'teal', figsize=(8,8))
+plt.title("Causes of Flight Cancellations")
+plt.ylabel("Count")
+plt.xlabel("Type of Cancellation")
+plt.show()
