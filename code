@@ -188,3 +188,7 @@ plt.show()
 df_cd_1 = df_2008s.query('CarrierDelay != "NaN"')
 df_cd_1 = df_cd_1.query('CarrierDelay != "0.0"')
 df_cd_1
+
+
+# In[23]:
+df_cd_1.describe().CarrierDelay
