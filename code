@@ -199,3 +199,7 @@ bin_edges = [1, 9, 19, 41, 2436]
 bin_names = ['1-8', '9-18', '19-39', '40-1951']
 df_cd_1['CDGroup'] = pd.cut(df_cd_1['CarrierDelay'], bin_edges, labels=bin_names)
 df_cd_1
+
+
+# In[25]:
+df_cd_1['CDGroup'].value_counts()
