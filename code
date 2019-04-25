@@ -218,3 +218,7 @@ plt.show()
 df_wd_1 = df_2008s.query('WeatherDelay != "NaN"')
 df_wd_1 = df_wd_1.query('WeatherDelay != "0.0"')
 df_wd_1
+
+
+# In[28]:
+df_wd_1.describe().WeatherDelay
