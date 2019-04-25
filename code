@@ -203,3 +203,11 @@ df_cd_1
 
 # In[25]:
 df_cd_1['CDGroup'].value_counts()
+
+
+# In[26]:
+df_cd_1['CDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', figsize=(8,8))
+plt.title("Length of Carrier Delay")
+plt.ylabel("Count")
+plt.xlabel("Length of Delay (min)")
+plt.show()
