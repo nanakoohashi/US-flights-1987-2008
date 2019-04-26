@@ -233,3 +233,11 @@ df_wd_1
 
 # In[30]:
 df_wd_1['WDGroup'].value_counts()
+
+
+# In[31]:
+df_wd_1['WDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', figsize=(8,8))
+plt.title("Length of Weather Delay")
+plt.ylabel("Count")
+plt.xlabel("Length of Delay (min)")
+plt.show()
