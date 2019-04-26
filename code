@@ -248,3 +248,7 @@ plt.show()
 df_nd_1 = df_2008s.query('NASDelay != "NaN"')
 df_nd_1 = df_nd_1.query('NASDelay != "0.0"')
 df_nd_1
+
+
+# In[33]:
+df_nd_1.describe().NASDelay
