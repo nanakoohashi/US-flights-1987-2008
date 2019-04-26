@@ -229,3 +229,7 @@ bin_edges = [1, 11, 25, 57, 1352]
 bin_names = ['1-10', '11-24', '25-56', '57-1352']
 df_wd_1['WDGroup'] = pd.cut(df_wd_1['WeatherDelay'], bin_edges, labels=bin_names)
 df_wd_1
+
+
+# In[30]:
+df_wd_1['WDGroup'].value_counts()
