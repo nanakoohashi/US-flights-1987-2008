@@ -275,3 +275,11 @@ plt.title("Length of NAS Delay")
 plt.ylabel("Count")
 plt.xlabel("Length of Delay (min)")
 plt.show()
+
+
+# In[37]:
+# Security Delays
+df_sd_1 = df_2008s.query('SecurityDelay != "NaN"')
+df_sd_1 = df_sd_1.query('SecurityDelay != "0.0"')
+df_sd_1
+
