@@ -258,3 +258,8 @@ df_nd_1
 df_nd_1.describe().NASDelay
 
 
+# In[34]:
+bin_edges = [1, 8, 18, 31, 1357]
+bin_names = ['1-7', '8-17', '18-30', '31-1357']
+df_nd_1['NDGroup'] = pd.cut(df_nd_1['NASDelay'], bin_edges, labels=bin_names)
+df_nd_1
