@@ -267,3 +267,11 @@ df_nd_1
 
 # In[35]:
 df_nd_1['NDGroup'].value_counts()
+
+
+# In[36]:
+df_nd_1['NDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', figsize=(8,8))
+plt.title("Length of NAS Delay")
+plt.ylabel("Count")
+plt.xlabel("Length of Delay (min)")
+plt.show()
