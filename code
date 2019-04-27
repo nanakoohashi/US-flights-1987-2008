@@ -87,6 +87,10 @@ df_2008s_month_value_counts.columns = ["Month", "Total_Flights"]
 df_2008s_month_value_counts = df_2008s_month_value_counts.sort_values(by=['Month'])
 df_2008s_month_value_counts['Month'] = df_2008s_month_value_counts['Month'].apply(lambda x: calendar.month_abbr[x])
 print(df_2008s_month_value_counts)
+df_flights_by_month = df_2008s_month_value_counts.reset_index()
+df_flights_by_month = df_flights_by_month.drop(columns=['index'])
+df_flights_by_month
+
 
 # In[9]:
 # Plot month value counts as bar plot
@@ -252,3 +256,5 @@ df_nd_1
 
 # In[33]:
 df_nd_1.describe().NASDelay
+
+
