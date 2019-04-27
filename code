@@ -283,3 +283,6 @@ df_sd_1 = df_2008s.query('SecurityDelay != "NaN"')
 df_sd_1 = df_sd_1.query('SecurityDelay != "0.0"')
 df_sd_1
 
+
+# In[38]:
+df_sd_1.describe().SecurityDelay
