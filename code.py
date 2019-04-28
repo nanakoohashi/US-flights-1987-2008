@@ -71,6 +71,9 @@ print(df_2008s.describe())
 # ### What is the structure of your dataset?
 # >There are 7,009,728 flights in this dataset with 25 features (Year, Month, Day of Month, Day Of Week, Actual Departure Time, Scheduled Departure Time, Actual Arrival Time, Scheduled Arrival Time, Unique Carrier Code, Flight Number, Plane Tail Number, Actual Elapsed Time, Scheduled Elapsed Time, Air Time, Arrival Delay, Departure Delay, Origin, Destination, Distance, Taxi in time, Taxi Out Time, Cancelled, Reason For Cancellation (A = carrier, B = weather, C = NAS, D = security), Diverted, Carrier Delay, Weather Delay, NAS Delay, Security Delay, Late Aircraft Delay.
 
+# ### What is/are the main feature(s) of interest in your dataset?
+# >I am most interested in figuring out what features are best for predicting the likelihood a flight is delayed or cancelled. I am also interested in the proportion of delays and cancellations for day of week and month of year.
+
 # ## Univariate Exploration
 # In[7]:
 # Making sure that we're converting numbers to days/months correctly
