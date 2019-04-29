@@ -162,7 +162,7 @@ df_cancelled
 
 
 # In[16]:
-cancelled_percent = df_cancelled.Cancelled[1] / (df_cancelled.Cancelled[0] + df_cancelled.Cancelled[0]) * 100
+cancelled_percent = df_cancelled.Cancelled[1] / (df_cancelled.Cancelled[0] + df_cancelled.Cancelled[1]) * 100
 cancelled_percent = str(round(cancelled_percent, 2)) + "%"
 cancelled_percent
 
