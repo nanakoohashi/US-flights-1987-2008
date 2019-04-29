@@ -166,28 +166,32 @@ cancelled_percent = df_cancelled.Cancelled[1] / (df_cancelled.Cancelled[0] + df_
 cancelled_percent = str(round(cancelled_percent, 2)) + "%"
 cancelled_percent
 
-
 # In[17]:
+not_cancelled_percent = df_cancelled.Cancelled[0] / (df_cancelled.Cancelled[0] + df_cancelled.Cancelled[1]) * 100
+not_cancelled_percent = str(round(not_cancelled_percent, 2)) + "%"
+not_cancelled_percent
+
+# In[18]:
 df_cancelled.Cancelled.plot(kind= 'pie', labels = ['', cancelled_percent], figsize=(8,8))
 plt.title("Percentage of Flights that are Cancelled")
 plt.ylabel("");
 
 
-# In[18]:
+# In[19]:
 # Mean Cancellations
 df_2008s.Cancelled.mean()
 
 
-# In[19]:
+# In[20]:
 # Cancellations by Cancellation Code
 df_2008s['CancellationCode'].value_counts()
 
 
-# In[20]:
+# In[21]:
 df_2008s['CancellationCode'].replace({'A': 'carrier', 'B': 'weather', 'C': 'NAS', 'D': 'security'}, inplace = True)
 
 
-# In[21]:
+# In[22]:
 # A = carrier, B = weather, C = NAS, D = security
 df_2008s['CancellationCode'].value_counts().plot(kind= 'bar', color = 'teal', figsize=(8,8))
 plt.title("Causes of Flight Cancellations")
@@ -196,29 +200,29 @@ plt.xlabel("Type of Cancellation")
 plt.show();
 
 
-# In[22]:
+# In[23]:
 # Carrier Delays
 df_cd_1 = df_2008s.query('CarrierDelay != "NaN"')
 df_cd_1 = df_cd_1.query('CarrierDelay != "0.0"')
 df_cd_1
 
 
-# In[23]:
+# In[24]:
 df_cd_1.describe().CarrierDelay
 
 
-# In[24]:
+# In[25]:
 bin_edges = [1, 9, 19, 41, 2436]
 bin_names = ['1-8', '9-18', '19-39', '40-1951']
 df_cd_1['CDGroup'] = pd.cut(df_cd_1['CarrierDelay'], bin_edges, labels=bin_names)
 df_cd_1
 
 
-# In[25]:
+# In[26]:
 df_cd_1['CDGroup'].value_counts()
 
 
-# In[26]:
+# In[27]:
 df_cd_1['CDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', figsize=(8,8))
 plt.title("Length of Carrier Delay")
 plt.ylabel("Count")
@@ -226,29 +230,29 @@ plt.xlabel("Length of Delay (min)")
 plt.show();
 
 
-# In[27]:
+# In[28]:
 # Weather Delays
 df_wd_1 = df_2008s.query('WeatherDelay != "NaN"')
 df_wd_1 = df_wd_1.query('WeatherDelay != "0.0"')
 df_wd_1
 
 
-# In[28]:
+# In[29]:
 df_wd_1.describe().WeatherDelay
 
 
-# In[29]:
+# In[30]:
 bin_edges = [1, 11, 25, 57, 1352]
 bin_names = ['1-10', '11-24', '25-56', '57-1352']
 df_wd_1['WDGroup'] = pd.cut(df_wd_1['WeatherDelay'], bin_edges, labels=bin_names)
 df_wd_1
 
 
-# In[30]:
+# In[31]:
 df_wd_1['WDGroup'].value_counts()
 
 
-# In[31]:
+# In[32]:
 df_wd_1['WDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', figsize=(8,8))
 plt.title("Length of Weather Delay")
 plt.ylabel("Count")
@@ -256,29 +260,29 @@ plt.xlabel("Length of Delay (min)")
 plt.show();
 
 
-# In[32]:
+# In[33]:
 # NAS Delays
 df_nd_1 = df_2008s.query('NASDelay != "NaN"')
 df_nd_1 = df_nd_1.query('NASDelay != "0.0"')
 df_nd_1
 
 
-# In[33]:
+# In[34]:
 df_nd_1.describe().NASDelay
 
 
-# In[34]:
+# In[35]:
 bin_edges = [1, 8, 18, 31, 1357]
 bin_names = ['1-7', '8-17', '18-30', '31-1357']
 df_nd_1['NDGroup'] = pd.cut(df_nd_1['NASDelay'], bin_edges, labels=bin_names)
 df_nd_1
 
 
-# In[35]:
+# In[36]:
 df_nd_1['NDGroup'].value_counts()
 
 
-# In[36]:
+# In[37]:
 df_nd_1['NDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', figsize=(8,8))
 plt.title("Length of NAS Delay")
 plt.ylabel("Count")
@@ -286,23 +290,23 @@ plt.xlabel("Length of Delay (min)")
 plt.show();
 
 
-# In[37]:
+# In[38]:
 # Security Delays
 df_sd_1 = df_2008s.query('SecurityDelay != "NaN"')
 df_sd_1 = df_sd_1.query('SecurityDelay != "0.0"')
 df_sd_1
 
 
-# In[38]:
+# In[39]:
 df_sd_1.describe().SecurityDelay
 
 
-# In[39]:
+# In[40]:
 bin_edges = [1, 7, 13, 22, 392]
 bin_names = ['1-6', '7-12', '13-21', '22-392']
 df_sd_1['SDGroup'] = pd.cut(df_sd_1['SecurityDelay'], bin_edges, labels=bin_names)
 df_sd_1
 
 
-# In[40]:
+# In[41]:
 df_sd_1['SDGroup'].value_counts()
