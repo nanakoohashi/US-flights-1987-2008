@@ -74,6 +74,9 @@ print(df_2008s.describe())
 # ### What is/are the main feature(s) of interest in your dataset?
 # >I am most interested in figuring out what features are best for predicting the likelihood a flight is delayed or cancelled. I am also interested in the proportion of delays and cancellations for day of week and month of year.
 
+# ### What features in the dataset do you think will help support your investigation into your feature(s) of interest?
+# I expect that weather delays and number of flights will have the strongest effect on delay or cancellation. This means that the **CancellationCode** column and each of the delay columns will be of interest. To calculate the number of flights, I plan to use the `.value_counts()` on the **Month** and **DayOfWeek** columns.
+
 # ## Univariate Exploration
 # In[7]:
 # Making sure that we're converting numbers to days/months correctly
