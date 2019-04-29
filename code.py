@@ -107,7 +107,7 @@ df_2008s_month_value_counts.plot(kind='bar', x='Month', y='Total_Flights', color
 plt.title("Total Flights by Month")
 plt.ylabel("Total Flights")
 plt.xlabel("")
-plt.show()
+plt.show();
 
 
 # In[10]:
@@ -126,7 +126,7 @@ df_2008s_day_value_counts.plot(kind='bar', x='DayOfWeek', y='Total_Flights', col
 plt.title("Total Flights by Day of Week")
 plt.ylabel("Total Flights")
 plt.xlabel("")
-plt.show()
+plt.show();
 
 
 # In[12]:
@@ -147,7 +147,7 @@ df_dvc2.plot(kind='line', x='Day', y='Total_Flights', color = 'teal', legend=Fal
 plt.title("Total Flights by Day of Year")
 plt.ylabel("Total Flights")
 plt.xlabel("")
-plt.show()
+plt.show();
 
 
 # In[14]:
@@ -170,7 +170,7 @@ cancelled_percent
 # In[17]:
 df_cancelled.Cancelled.plot(kind= 'pie', labels = ['', cancelled_percent], figsize=(8,8))
 plt.title("Percentage of Flights that are Cancelled")
-plt.ylabel("")
+plt.ylabel("");
 
 
 # In[18]:
@@ -193,7 +193,7 @@ df_2008s['CancellationCode'].value_counts().plot(kind= 'bar', color = 'teal', fi
 plt.title("Causes of Flight Cancellations")
 plt.ylabel("Count")
 plt.xlabel("Type of Cancellation")
-plt.show()
+plt.show();
 
 
 # In[22]:
@@ -223,7 +223,7 @@ df_cd_1['CDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', 
 plt.title("Length of Carrier Delay")
 plt.ylabel("Count")
 plt.xlabel("Length of Delay (min)")
-plt.show()
+plt.show();
 
 
 # In[27]:
@@ -253,7 +253,7 @@ df_wd_1['WDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', 
 plt.title("Length of Weather Delay")
 plt.ylabel("Count")
 plt.xlabel("Length of Delay (min)")
-plt.show()
+plt.show();
 
 
 # In[32]:
@@ -283,7 +283,7 @@ df_nd_1['NDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', 
 plt.title("Length of NAS Delay")
 plt.ylabel("Count")
 plt.xlabel("Length of Delay (min)")
-plt.show()
+plt.show();
 
 
 # In[37]:
