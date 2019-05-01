@@ -176,6 +176,7 @@ df_cancelled.Cancelled.plot(kind= 'pie', labels = ['Not Cancelled (' + not_cance
 plt.title("Percentage of Flights that are Cancelled")
 plt.ylabel("");
 
+# >1.96% of all flights are cancelled. That is almost two flights per one hundred.
 
 # In[19]:
 # Mean Cancellations
