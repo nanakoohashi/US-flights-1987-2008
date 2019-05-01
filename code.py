@@ -172,7 +172,7 @@ not_cancelled_percent = str(round(not_cancelled_percent, 2)) + "%"
 not_cancelled_percent
 
 # In[18]:
-df_cancelled.Cancelled.plot(kind= 'pie', labels = ['', cancelled_percent], figsize=(8,8))
+df_cancelled.Cancelled.plot(kind= 'pie', labels = ['Not Cancelled (' + not_cancelled_percent + ')', 'Cancelled (' + cancelled_percent + ')'], figsize=(8,8))
 plt.title("Percentage of Flights that are Cancelled")
 plt.ylabel("");
 
