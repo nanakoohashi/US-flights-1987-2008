@@ -327,3 +327,10 @@ plt.show();
 
 
 # #### Length of Late Aircraft Delays
+
+
+# In[44]:
+# Query 'LateAircraftDelay' to only select entries that are neither NaN or 0.
+df_ld_1 = df_2008s.query('LateAircraftDelay != "NaN"')
+df_ld_1 = df_ld_1.query('LateAircraftDelay != "0.0"')
+df_ld_1
