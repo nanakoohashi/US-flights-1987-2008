@@ -311,3 +311,12 @@ df_sd_1
 
 # In[41]:
 df_sd_1['SDGroup'].value_counts()
+
+
+# In[42]:
+# Plot
+df_sd_1['SDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', figsize=(8,8))
+plt.title("Length of Security Delay")
+plt.ylabel("Count")
+plt.xlabel("Length of Delay (min)")
+plt.show();
