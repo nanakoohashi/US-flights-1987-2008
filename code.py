@@ -320,3 +320,7 @@ plt.title("Length of Security Delay")
 plt.ylabel("Count")
 plt.xlabel("Length of Delay (min)")
 plt.show();
+
+
+# In[43]:
+# >Security delays are most commonly 1-6 minutes long.
