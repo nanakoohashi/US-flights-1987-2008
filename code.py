@@ -338,3 +338,11 @@ df_ld_1
 
 # In[45]:
 df_ld_1.describe().LateAircraftDelay
+
+
+# In[43]:
+# Create bins of late aircraft delay lengths using information from the cell above.
+bin_edges = [1, 11, 25, 57, 1352]
+bin_names = ['1-10', '11-24', '25-56', '57-1352']
+df_ld_1['LDGroup'] = pd.cut(df_ld_1['LateAircraftDelay'], bin_edges, labels=bin_names)
+df_ld_1
