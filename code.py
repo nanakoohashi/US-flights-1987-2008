@@ -334,3 +334,7 @@ plt.show();
 df_ld_1 = df_2008s.query('LateAircraftDelay != "NaN"')
 df_ld_1 = df_ld_1.query('LateAircraftDelay != "0.0"')
 df_ld_1
+
+
+# In[45]:
+df_ld_1.describe().LateAircraftDelay
