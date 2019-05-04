@@ -351,3 +351,13 @@ df_ld_1
 # In[44]:
 # value counts for each bin
 df_ld_1['LDGroup'].value_counts()
+
+
+# In[45]:
+# Plot
+df_ld_1['LDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', figsize=(8,8))
+plt.title("Length of Late Aircraft Delay")
+plt.ylabel("Count")
+plt.xlabel("Length of Delay (min)")
+plt.show();
+
