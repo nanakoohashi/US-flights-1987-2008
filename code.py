@@ -363,3 +363,7 @@ plt.show();
 
 # >Late aircraft delays are most commonly 25-56 minutes long.
 # #### Total Destinations
+# In[46]:
+# create value counts data set for 'Dest' column
+df_dest = df_2008s['Dest'].value_counts()
+df_dest = df_dest.reset_index()
