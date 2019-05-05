@@ -379,3 +379,6 @@ get_ipython().run_cell_magic('HTML', '', "<div class='tableauPlaceholder' id='vi
 # ### Of the features you investigated, were there any unusual distributions? Did you perform any operations on the data to tidy, adjust, or change the form of the data? If so, why did you do this?
 # >#### Total Flights by Day of Year
 # Due to working with such a large data set, I initially used a sample of the data set (10,000 entries) to visualize my data. Doing this, I was unable to see an obvious pattern in the visualization of total flights by day of year. However, when I used the full data set, I was able to group the data into four sections of the year where the number of flights were similar. Using the full data set paints a clearer picture as to how flights are distributed throughout the year.
+
+# ## Bivariate Exploration
+# #### Cancellation cf. Month
