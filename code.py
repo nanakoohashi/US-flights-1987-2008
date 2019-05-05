@@ -340,7 +340,7 @@ df_ld_1
 df_ld_1.describe().LateAircraftDelay
 
 
-# In[43]:
+# In[46]:
 # Create bins of late aircraft delay lengths using information from the cell above.
 bin_edges = [1, 11, 25, 57, 1352]
 bin_names = ['1-10', '11-24', '25-56', '57-1352']
@@ -348,12 +348,12 @@ df_ld_1['LDGroup'] = pd.cut(df_ld_1['LateAircraftDelay'], bin_edges, labels=bin_
 df_ld_1
 
 
-# In[44]:
+# In[47]:
 # value counts for each bin
 df_ld_1['LDGroup'].value_counts()
 
 
-# In[45]:
+# In[48]:
 # Plot
 df_ld_1['LDGroup'].value_counts(sort = False).plot(kind= 'bar', color = 'teal', figsize=(8,8))
 plt.title("Length of Late Aircraft Delay")
@@ -363,7 +363,11 @@ plt.show();
 
 # >Late aircraft delays are most commonly 25-56 minutes long.
 # #### Total Destinations
-# In[46]:
+# In[49]:
 # create value counts data set for 'Dest' column
 df_dest = df_2008s['Dest'].value_counts()
 df_dest = df_dest.reset_index()
+
+
+# In[50]:
+#df_dest.to_csv('dest.csv', index=False)
