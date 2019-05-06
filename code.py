@@ -382,3 +382,8 @@ get_ipython().run_cell_magic('HTML', '', "<div class='tableauPlaceholder' id='vi
 
 # ## Bivariate Exploration
 # #### Cancellation cf. Month
+
+
+# In[7]:
+# average cancellations
+df_2008s.Cancelled.mean()
