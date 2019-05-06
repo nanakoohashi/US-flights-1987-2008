@@ -384,6 +384,16 @@ get_ipython().run_cell_magic('HTML', '', "<div class='tableauPlaceholder' id='vi
 # #### Cancellation cf. Month
 
 
-# In[7]:
+# In[52]:
 # average cancellations
 df_2008s.Cancelled.mean()
+
+
+# In[53]:
+# Convert to new data set
+df_cancelled_month = df_cancelled_month.reset_index()
+
+
+# In[54]:
+# convert numbered months to letter months
+df_cancelled_month['Month'] = df_cancelled_month['Month'].apply(lambda x: calendar.month_abbr[x])
