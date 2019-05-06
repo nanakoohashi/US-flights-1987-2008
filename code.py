@@ -397,3 +397,12 @@ df_cancelled_month = df_cancelled_month.reset_index()
 # In[54]:
 # convert numbered months to letter months
 df_cancelled_month['Month'] = df_cancelled_month['Month'].apply(lambda x: calendar.month_abbr[x])
+
+
+# In[55]:
+# plot
+df_cancelled_month.plot(kind='bar', x='Month', y='Cancelled', color = 'teal', legend=False, figsize= (15,8))
+plt.title("Average Flight Cancellations by Month")
+plt.ylabel("Cancellations")
+plt.xlabel("Month")
+plt.show();
