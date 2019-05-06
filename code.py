@@ -406,3 +406,5 @@ plt.title("Average Flight Cancellations by Month")
 plt.ylabel("Cancellations")
 plt.xlabel("Month")
 plt.show();
+
+# >Flights are most commonly cancelled in February. Flights are least commonly cancelled in October.
