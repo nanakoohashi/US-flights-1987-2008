@@ -414,3 +414,6 @@ plt.show();
 df_cancelled_month.sort_values(['Cancelled'], ascending = False)
 
 # #### Delay cf. Month
+# In[57]:
+# Average Carrier Delay in minutes
+df_2008s.CarrierDelay.mean()
