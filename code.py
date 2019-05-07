@@ -408,3 +408,8 @@ plt.xlabel("Month")
 plt.show();
 
 # >Flights are most commonly cancelled in February. Flights are least commonly cancelled in October.
+
+# In[53]:
+# sort values of monthly flight cancellations
+df_cancelled_month.sort_values(['Cancelled'], ascending = False)
+
