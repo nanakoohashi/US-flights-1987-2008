@@ -413,11 +413,18 @@ plt.show();
 # sort values of monthly flight cancellations
 df_cancelled_month.sort_values(['Cancelled'], ascending = False)
 
+
 # #### Delay cf. Month
 # In[57]:
 # Average Carrier Delay in minutes
 df_2008s.CarrierDelay.mean()
 
+
 # In[58]:
 # Average carrier delay by month in minutes
 df_cd_month = df_2008s.groupby(['Month'])['CarrierDelay'].mean()
+
+
+# In[59]:
+# Convert to new data set
+df_cd_month = df_cd_month.reset_index()
