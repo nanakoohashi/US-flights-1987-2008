@@ -434,3 +434,11 @@ df_cd_month = df_cd_month.reset_index()
 # Convert numbered months to lettered months
 df_cd_month['Month'] = df_cd_month['Month'].apply(lambda x: calendar.month_abbr[x])
 
+
+# In[61]:
+# Plot
+df_cd_month.plot(kind='bar', x='Month', y='CarrierDelay', color = 'teal', legend=False, figsize= (15,8))
+plt.title("Average Length of Carrier Delays by Month")
+plt.ylabel("Carrier Delays (in minutes)")
+plt.xlabel("Month")
+plt.show();
