@@ -442,3 +442,5 @@ plt.title("Average Length of Carrier Delays by Month")
 plt.ylabel("Carrier Delays (in minutes)")
 plt.xlabel("Month")
 plt.show();
+
+# >Flights experience carrier delays most commonly in August. Flights are least commonly delayed by carrier in November.
