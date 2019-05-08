@@ -428,3 +428,9 @@ df_cd_month = df_2008s.groupby(['Month'])['CarrierDelay'].mean()
 # In[59]:
 # Convert to new data set
 df_cd_month = df_cd_month.reset_index()
+
+
+# In[60]:
+# Convert numbered months to lettered months
+df_cd_month['Month'] = df_cd_month['Month'].apply(lambda x: calendar.month_abbr[x])
+
