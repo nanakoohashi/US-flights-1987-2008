@@ -444,3 +444,8 @@ plt.xlabel("Month")
 plt.show();
 
 # >Flights experience carrier delays most commonly in August. Flights are least commonly delayed by carrier in November.
+
+# In[62]:
+# sort average monthly carrier delays
+df_cd_month.sort_values(['CarrierDelay'], ascending = False)
+
