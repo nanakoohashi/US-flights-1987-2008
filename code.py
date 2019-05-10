@@ -454,3 +454,8 @@ df_cd_month.sort_values(['CarrierDelay'], ascending = False)
 # In[63]:
 # Average Weather Delay in minutes
 df_2008s.WeatherDelay.mean()
+
+
+# In[64]:
+# average weather delay by month in minutes
+df_wd_month = df_2008s.groupby(['Month'])['WeatherDelay'].mean()
