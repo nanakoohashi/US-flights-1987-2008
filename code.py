@@ -466,3 +466,8 @@ df_wd_month = df_2008s.groupby(['Month'])['WeatherDelay'].mean()
 df_wd_month = df_wd_month.reset_index()
 
 
+# In[66]:
+# convert numbered months to lettered months
+df_wd_month['Month'] = df_wd_month['Month'].apply(lambda x: calendar.month_abbr[x])
+
+
