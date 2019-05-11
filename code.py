@@ -482,6 +482,11 @@ plt.show();
 # >Flights experience weather delays most commonly in December. Flights are least commonly delayed by weather in October.
 
 
-# In[65]:
+# In[68]:
 # sort monthly average weather delays
 df_wd_month.sort_values(['WeatherDelay'], ascending = False)
+
+
+# In[66]:
+# Average NAS Delay in minutes
+df_2008s.NASDelay.mean()
