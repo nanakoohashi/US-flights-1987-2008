@@ -459,3 +459,10 @@ df_2008s.WeatherDelay.mean()
 # In[64]:
 # average weather delay by month in minutes
 df_wd_month = df_2008s.groupby(['Month'])['WeatherDelay'].mean()
+
+
+# In[65]:
+# convert to new data set
+df_wd_month = df_wd_month.reset_index()
+
+
