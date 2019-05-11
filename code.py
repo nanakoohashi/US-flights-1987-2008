@@ -496,3 +496,7 @@ df_2008s.NASDelay.mean()
 # average monthly NAS delays in minutes
 df_nd_month = df_2008s.groupby(['Month'])['NASDelay'].mean()
 
+
+# In[71]:
+# convert to new data set
+df_nd_month = df_nd_month.reset_index()
