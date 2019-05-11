@@ -471,3 +471,10 @@ df_wd_month = df_wd_month.reset_index()
 df_wd_month['Month'] = df_wd_month['Month'].apply(lambda x: calendar.month_abbr[x])
 
 
+# In[67]:
+# plot
+df_wd_month.plot(kind='bar', x='Month', y='WeatherDelay', color = 'teal', legend=False, figsize = (15,8))
+plt.title("Average Length of Weather Delays by Month")
+plt.ylabel("Weather Delays (in minutes)")
+plt.xlabel("Month")
+plt.show();
