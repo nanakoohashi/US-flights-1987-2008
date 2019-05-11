@@ -487,6 +487,12 @@ plt.show();
 df_wd_month.sort_values(['WeatherDelay'], ascending = False)
 
 
-# In[66]:
+# In[69]:
 # Average NAS Delay in minutes
 df_2008s.NASDelay.mean()
+
+
+# In[70]:
+# average monthly NAS delays in minutes
+df_nd_month = df_2008s.groupby(['Month'])['NASDelay'].mean()
+
