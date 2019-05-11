@@ -478,3 +478,6 @@ plt.title("Average Length of Weather Delays by Month")
 plt.ylabel("Weather Delays (in minutes)")
 plt.xlabel("Month")
 plt.show();
+
+# >Flights experience weather delays most commonly in December. Flights are least commonly delayed by weather in October.
+
