@@ -518,3 +518,7 @@ plt.show();
 # >Flights experience NAS delays most commonly in June. Flights are least commonly delayed by the NAS in October.
 
 
+# In[74]:
+# sort average monthly NAS delays 
+df_nd_month.sort_values(['NASDelay'], ascending = False)
+
