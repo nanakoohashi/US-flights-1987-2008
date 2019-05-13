@@ -522,3 +522,7 @@ plt.show();
 # sort average monthly NAS delays 
 df_nd_month.sort_values(['NASDelay'], ascending = False)
 
+
+# In[75]:
+# Average Security Delay in minutes
+df_2008s.SecurityDelay.mean()
