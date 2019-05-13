@@ -526,3 +526,8 @@ df_nd_month.sort_values(['NASDelay'], ascending = False)
 # In[75]:
 # Average Security Delay in minutes
 df_2008s.SecurityDelay.mean()
+
+
+# In[76]:
+# average monthly security delay in minutes
+df_sd_month = df_2008s.groupby(['Month'])['SecurityDelay'].mean()
