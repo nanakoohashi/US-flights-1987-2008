@@ -531,3 +531,10 @@ df_2008s.SecurityDelay.mean()
 # In[76]:
 # average monthly security delay in minutes
 df_sd_month = df_2008s.groupby(['Month'])['SecurityDelay'].mean()
+
+
+# In[77]:
+# convert to new data set. 
+# convert numbered months to lettered months.
+df_sd_month = df_sd_month.reset_index()
+df_sd_month['Month'] = df_sd_month['Month'].apply(lambda x: calendar.month_abbr[x])
