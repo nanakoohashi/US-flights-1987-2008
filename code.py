@@ -506,3 +506,11 @@ df_nd_month = df_nd_month.reset_index()
 # convert numbered months to lettered months
 df_nd_month['Month'] = df_nd_month['Month'].apply(lambda x: calendar.month_abbr[x])
 
+
+# In[73]:
+# plot
+df_nd_month.plot(kind='bar', x='Month', y='NASDelay', color = 'teal', legend=False, figsize = (15,8))
+plt.title("Average Length of NAS Delays by Month")
+plt.ylabel("NAS Delays (in minutes)")
+plt.xlabel("Month")
+plt.show();
