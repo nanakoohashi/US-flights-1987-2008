@@ -500,3 +500,9 @@ df_nd_month = df_2008s.groupby(['Month'])['NASDelay'].mean()
 # In[71]:
 # convert to new data set
 df_nd_month = df_nd_month.reset_index()
+
+
+# In[72]:
+# convert numbered months to lettered months
+df_nd_month['Month'] = df_nd_month['Month'].apply(lambda x: calendar.month_abbr[x])
+
