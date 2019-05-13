@@ -514,3 +514,7 @@ plt.title("Average Length of NAS Delays by Month")
 plt.ylabel("NAS Delays (in minutes)")
 plt.xlabel("Month")
 plt.show();
+
+# >Flights experience NAS delays most commonly in June. Flights are least commonly delayed by the NAS in October.
+
+
