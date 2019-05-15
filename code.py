@@ -540,7 +540,7 @@ df_sd_month = df_sd_month.reset_index()
 df_sd_month['Month'] = df_sd_month['Month'].apply(lambda x: calendar.month_abbr[x])
 
 
-# In[76]:
+# In[78]:
 # plot
 df_sd_month.plot(kind='bar', x='Month', y='SecurityDelay', color = 'teal', legend=False, figsize = (15,8))
 plt.title("Average Length of Security Delays by Month")
@@ -549,3 +549,8 @@ plt.xlabel("Month")
 plt.show();
 
 # >Flights experience security delays most commonly in March. Flights are least commonly delayed by security in November.
+
+
+# In[79]:
+# sort average monthly security delays.
+df_sd_month.sort_values(['SecurityDelay'], ascending = False)
