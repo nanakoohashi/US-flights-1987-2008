@@ -554,3 +554,8 @@ plt.show();
 # In[79]:
 # sort average monthly security delays.
 df_sd_month.sort_values(['SecurityDelay'], ascending = False)
+
+
+# In[80]:
+# Average Late Aircraft Delay in minutes
+df_2008s.LateAircraftDelay.mean()
