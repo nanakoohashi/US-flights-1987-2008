@@ -538,3 +538,13 @@ df_sd_month = df_2008s.groupby(['Month'])['SecurityDelay'].mean()
 # convert numbered months to lettered months.
 df_sd_month = df_sd_month.reset_index()
 df_sd_month['Month'] = df_sd_month['Month'].apply(lambda x: calendar.month_abbr[x])
+
+
+# In[76]:
+# plot
+df_sd_month.plot(kind='bar', x='Month', y='SecurityDelay', color = 'teal', legend=False, figsize = (15,8))
+plt.title("Average Length of Security Delays by Month")
+plt.ylabel("Security Delays (in minutes)")
+plt.xlabel("Month")
+plt.show();
+
