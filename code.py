@@ -583,3 +583,8 @@ plt.show();
 
 
 # >Flights experience late aircraft delays most commonly in December. Flights are least commonly delayed by late aircrafts in September.
+
+
+# In[84]:
+# sort average monthly late aircraft delays.
+df_ad_month.sort_values(['LateAircraftDelay'], ascending = False)
