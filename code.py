@@ -565,3 +565,9 @@ df_2008s.LateAircraftDelay.mean()
 # average monthly late aircraft delays in minutes
 df_ad_month = df_2008s.groupby(['Month'])['LateAircraftDelay'].mean()
 
+
+# In[82]:
+# convert to new data set
+# convert numbered months to lettered months
+df_ad_month = df_ad_month.reset_index()
+df_ad_month['Month'] = df_ad_month['Month'].apply(lambda x: calendar.month_abbr[x])
