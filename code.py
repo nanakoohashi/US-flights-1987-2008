@@ -597,3 +597,9 @@ df_ad_month.sort_values(['LateAircraftDelay'], ascending = False)
 # average cancellations by day of week in minutes
 df_cancelled_weekday = df_2008s.groupby(['DayOfWeek'])['Cancelled'].mean()
 
+
+# In[86]:
+# convert to data set.
+# convert numbered days of week to lettered days of week
+df_cancelled_weekday = df_cancelled_weekday.reset_index()
+df_cancelled_weekday['DayOfWeek'] = df_cancelled_weekday['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
