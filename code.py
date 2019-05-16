@@ -559,3 +559,9 @@ df_sd_month.sort_values(['SecurityDelay'], ascending = False)
 # In[80]:
 # Average Late Aircraft Delay in minutes
 df_2008s.LateAircraftDelay.mean()
+
+
+# In[81]:
+# average monthly late aircraft delays in minutes
+df_ad_month = df_2008s.groupby(['Month'])['LateAircraftDelay'].mean()
+
