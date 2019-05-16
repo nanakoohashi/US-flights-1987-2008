@@ -588,3 +588,6 @@ plt.show();
 # In[84]:
 # sort average monthly late aircraft delays.
 df_ad_month.sort_values(['LateAircraftDelay'], ascending = False)
+
+
+# #### Cancellations cf. Day of Week
