@@ -571,3 +571,12 @@ df_ad_month = df_2008s.groupby(['Month'])['LateAircraftDelay'].mean()
 # convert numbered months to lettered months
 df_ad_month = df_ad_month.reset_index()
 df_ad_month['Month'] = df_ad_month['Month'].apply(lambda x: calendar.month_abbr[x])
+
+
+# In[83]:
+# plot
+df_ad_month.plot(kind='bar', x='Month', y='LateAircraftDelay', color = 'teal', legend=False, figsize = (15,8))
+plt.title("Average Length of Late Aircraft Delays by Month")
+plt.ylabel("Late Aircraft Delays (in minutes)")
+plt.xlabel("Month")
+plt.show();
