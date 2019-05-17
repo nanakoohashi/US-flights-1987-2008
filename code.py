@@ -613,3 +613,5 @@ plt.ylabel("Cancellations")
 plt.xlabel("Day Of Week")
 plt.show();
 
+
+# >Flights are most commonly cancelled on Fridays. Flights are least commonly cancelled on Saturdays.
