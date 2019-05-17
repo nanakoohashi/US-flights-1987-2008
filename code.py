@@ -603,3 +603,13 @@ df_cancelled_weekday = df_2008s.groupby(['DayOfWeek'])['Cancelled'].mean()
 # convert numbered days of week to lettered days of week
 df_cancelled_weekday = df_cancelled_weekday.reset_index()
 df_cancelled_weekday['DayOfWeek'] = df_cancelled_weekday['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
+
+
+# In[87]:
+# plot
+df_cancelled_weekday.plot(kind='bar', x='DayOfWeek', y='Cancelled', color = 'teal', legend=False, figsize = (15,8))
+plt.title("Average Flight Cancellations by Day of Week")
+plt.ylabel("Cancellations")
+plt.xlabel("Day Of Week")
+plt.show();
+
