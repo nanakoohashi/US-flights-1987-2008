@@ -620,3 +620,6 @@ plt.show();
 # In[88]:
 # sort average weekly cancellations
 df_cancelled_weekday.sort_values(['Cancelled'], ascending = False)
+
+
+# #### Delay cf. Day of Week
