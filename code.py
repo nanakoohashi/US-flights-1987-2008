@@ -615,3 +615,8 @@ plt.show();
 
 
 # >Flights are most commonly cancelled on Fridays. Flights are least commonly cancelled on Saturdays.
+
+
+# In[88]:
+# sort average weekly cancellations
+df_cancelled_weekday.sort_values(['Cancelled'], ascending = False)
