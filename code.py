@@ -636,3 +636,11 @@ df_cd_weekday = df_2008s.groupby(['DayOfWeek'])['CarrierDelay'].mean()
 df_cd_weekday = df_cd_weekday.reset_index()
 df_cd_weekday['DayOfWeek'] = df_cd_weekday['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
 
+
+# In[91]:
+# plot
+df_cd_weekday.plot(kind='bar', x='DayOfWeek', y='CarrierDelay', color = 'teal', legend=False, figsize = (15,8))
+plt.title("Average Length of Carrier Delays by Day of Week")
+plt.ylabel("Carrier Delays (in minutes)")
+plt.xlabel("Day Of Week")
+plt.show();
