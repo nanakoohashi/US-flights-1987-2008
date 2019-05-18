@@ -644,3 +644,6 @@ plt.title("Average Length of Carrier Delays by Day of Week")
 plt.ylabel("Carrier Delays (in minutes)")
 plt.xlabel("Day Of Week")
 plt.show();
+
+
+# >Flights experience carrier delays most commonly on Saturdays. Flights are least commonly delayed by carrier on Tuesdays.
