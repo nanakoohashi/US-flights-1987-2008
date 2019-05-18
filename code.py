@@ -623,3 +623,8 @@ df_cancelled_weekday.sort_values(['Cancelled'], ascending = False)
 
 
 # #### Delay cf. Day of Week
+
+
+# In[89]:
+# Average Carrier Delay by Day of Week
+df_cd_weekday = df_2008s.groupby(['DayOfWeek'])['CarrierDelay'].mean()
