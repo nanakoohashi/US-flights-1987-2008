@@ -658,3 +658,9 @@ df_cd_weekday.sort_values(['CarrierDelay'], ascending = False)
 #  Average weather delay by day of week
 df_wd_weekday = df_2008s.groupby(['DayOfWeek'])['WeatherDelay'].mean()
 
+
+# In[93]:
+# convert to data set
+# convert numbered days of week to lettered days of week
+df_wd_weekday = df_wd_weekday.reset_index()
+df_wd_weekday['DayOfWeek'] = df_wd_weekday['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
