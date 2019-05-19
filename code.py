@@ -647,3 +647,11 @@ plt.show();
 
 
 # >Flights experience carrier delays most commonly on Saturdays. Flights are least commonly delayed by carrier on Tuesdays.
+
+
+# In[91]:
+# sort average weekly cancellations
+df_cd_weekday.sort_values(['CarrierDelay'], ascending = False)
+
+
+
