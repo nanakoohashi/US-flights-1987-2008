@@ -664,3 +664,12 @@ df_wd_weekday = df_2008s.groupby(['DayOfWeek'])['WeatherDelay'].mean()
 # convert numbered days of week to lettered days of week
 df_wd_weekday = df_wd_weekday.reset_index()
 df_wd_weekday['DayOfWeek'] = df_wd_weekday['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
+
+
+# In[94]:
+# plot
+df_wd_weekday.plot(kind='bar', x='DayOfWeek', y='WeatherDelay', color = 'teal', legend=False, figsize = (15,8))
+plt.title("Average Length of Weather Delays by Day of Week")
+plt.ylabel("Weather Delays (in minutes)")
+plt.xlabel("Day of Week")
+plt.show();
