@@ -654,4 +654,7 @@ plt.show();
 df_cd_weekday.sort_values(['CarrierDelay'], ascending = False)
 
 
+# In[92]:
+#  Average weather delay by day of week
+df_wd_weekday = df_2008s.groupby(['DayOfWeek'])['WeatherDelay'].mean()
 
