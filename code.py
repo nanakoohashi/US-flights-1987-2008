@@ -681,3 +681,8 @@ plt.show();
 # In[95]:
 # sort average weekly weather delays
 df_wd_weekday.sort_values(['WeatherDelay'], ascending = False)
+
+
+# In[96]:
+# Average NAS delays by day of week
+df_nd_weekday = df_2008s.groupby(['DayOfWeek'])['NASDelay'].mean()
