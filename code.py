@@ -709,3 +709,9 @@ plt.show();
 # In[99]:
 # sort average weekly NAS delays 
 df_nd_weekday.sort_values(['NASDelay'], ascending = False)
+
+
+# In[100]:
+# average security delays by day of week
+df_sd_weekday = df_2008s.groupby(['DayOfWeek'])['SecurityDelay'].mean()
+
