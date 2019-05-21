@@ -693,3 +693,12 @@ df_nd_weekday = df_2008s.groupby(['DayOfWeek'])['NASDelay'].mean()
 # convert numbered days of week to lettered days of week
 df_nd_weekday = df_nd_weekday.reset_index()
 df_nd_weekday['DayOfWeek'] = df_nd_weekday['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
+
+
+# In[98]:
+# plot
+df_nd_weekday.plot(kind='bar', x='DayOfWeek', y='NASDelay', color = 'teal', legend=False, figsize = (15,8))
+plt.title("Average Length of NAS Delays by Day of Week")
+plt.ylabel("NAS Delays (in minutes)")
+plt.xlabel("Day of Week")
+plt.show();
