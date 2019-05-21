@@ -704,3 +704,8 @@ plt.xlabel("Day of Week")
 plt.show();
 
 # >Flights experience NAS delays most commonly on Tuesdays. Flights are least commonly delayed by the NAS on Saturdays.
+
+
+# In[99]:
+# sort average weekly NAS delays 
+df_nd_weekday.sort_values(['NASDelay'], ascending = False)
