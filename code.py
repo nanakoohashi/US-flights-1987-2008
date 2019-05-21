@@ -702,3 +702,5 @@ plt.title("Average Length of NAS Delays by Day of Week")
 plt.ylabel("NAS Delays (in minutes)")
 plt.xlabel("Day of Week")
 plt.show();
+
+# >Flights experience NAS delays most commonly on Tuesdays. Flights are least commonly delayed by the NAS on Saturdays.
