@@ -715,3 +715,9 @@ df_nd_weekday.sort_values(['NASDelay'], ascending = False)
 # average security delays by day of week
 df_sd_weekday = df_2008s.groupby(['DayOfWeek'])['SecurityDelay'].mean()
 
+
+# In[101]:
+# convert to data set
+# convert numbered days of week to lettered days of week
+df_sd_weekday = df_sd_weekday.reset_index()
+df_sd_weekday['DayOfWeek'] = df_sd_weekday['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
