@@ -721,3 +721,12 @@ df_sd_weekday = df_2008s.groupby(['DayOfWeek'])['SecurityDelay'].mean()
 # convert numbered days of week to lettered days of week
 df_sd_weekday = df_sd_weekday.reset_index()
 df_sd_weekday['DayOfWeek'] = df_sd_weekday['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
+
+
+# In[102]:
+# plot
+df_sd_weekday.plot(kind='bar', x='DayOfWeek', y='SecurityDelay', color = 'teal', legend=False, figsize = (15,8))
+plt.title("Average Length of Security Delays by Day of Week")
+plt.ylabel("Security Delays (in minutes)")
+plt.xlabel("Day of Week")
+plt.show();
