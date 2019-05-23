@@ -748,3 +748,12 @@ df_ld_weekday = df_2008s.groupby(['DayOfWeek'])['LateAircraftDelay'].mean()
 # convert numbered days of week to lettered days of week
 df_ld_weekday = df_ld_weekday.reset_index()
 df_ld_weekday['DayOfWeek'] = df_ld_weekday['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
+
+
+# In[106]:
+# plot
+df_ld_weekday.plot(kind='bar', x='DayOfWeek', y='LateAircraftDelay', color = 'teal', legend=False, figsize = (15,8))
+plt.title("Average Length of Late Aircraft Delays by Day of Week")
+plt.ylabel("Late Aircraft (in minutes)")
+plt.xlabel("Day of Week")
+plt.show();
