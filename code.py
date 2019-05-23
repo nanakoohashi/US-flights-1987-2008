@@ -736,3 +736,8 @@ plt.show();
 # In[103]:
 # sort average weekly security delays.
 df_sd_weekday.sort_values(['SecurityDelay'], ascending = False)
+
+
+# In[104]:
+# average late aircraft carrier delays by day of week
+df_ld_weekday = df_2008s.groupby(['DayOfWeek'])['LateAircraftDelay'].mean()
