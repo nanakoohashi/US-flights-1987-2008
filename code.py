@@ -732,3 +732,7 @@ plt.xlabel("Day of Week")
 plt.show();
 
 # >Flights experience security delays most commonly on Saturdays. Flights are least commonly delayed by security on Tuesdays.
+
+# In[103]:
+# sort average weekly security delays.
+df_sd_weekday.sort_values(['SecurityDelay'], ascending = False)
