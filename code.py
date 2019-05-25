@@ -789,3 +789,6 @@ plt.figure(figsize=(15,8))
 ax = sb.barplot(data = df_cancelled_mv1, x = 'Month', y = 'Cancelled', hue = 'CancellationCode')
 ax.legend(loc='upper center', bbox_to_anchor=(1.1, 0.8), shadow=True, ncol=1, title = 'Types of Cancellations')
 ax.set_title('Types of Flight Cancellations by Month');
+
+# >Carrier is the most common monthly cause for flight cancellations, followed by weather. Security cancellations are the least common cause for cancellations for all months.
+
