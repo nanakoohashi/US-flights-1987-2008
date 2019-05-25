@@ -760,3 +760,8 @@ plt.show();
 
 
 # >Flights experience late aircraft delays most commonly on Sundays. Flights are least commonly delayed by late aircraft carriers on Wednesdays.
+
+
+# In[107]:
+# sort average weekly late aircraft delays.
+df_ld_weekday.sort_values(['LateAircraftDelay'], ascending = False)
