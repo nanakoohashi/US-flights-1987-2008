@@ -769,3 +769,8 @@ df_ld_weekday.sort_values(['LateAircraftDelay'], ascending = False)
 
 # # Multivariate Exploration
 # #### Types of Cancellations by Month
+
+
+# In[108]:
+# average cancellations by month and cancellations code
+df_cancelled_mv1 = df_2008s.groupby(['Month', 'CancellationCode'])['Cancelled'].count()
