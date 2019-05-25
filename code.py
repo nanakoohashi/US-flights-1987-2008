@@ -765,3 +765,7 @@ plt.show();
 # In[107]:
 # sort average weekly late aircraft delays.
 df_ld_weekday.sort_values(['LateAircraftDelay'], ascending = False)
+
+
+# # Multivariate Exploration
+# #### Types of Cancellations by Month
