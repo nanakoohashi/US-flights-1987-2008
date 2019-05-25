@@ -793,3 +793,12 @@ ax.set_title('Types of Flight Cancellations by Month');
 # >Carrier is the most common monthly cause for flight cancellations, followed by weather. Security cancellations are the least common cause for cancellations for all months.
 
 # #### Length of Delays by Month
+
+
+# In[111]:
+# Drop NaN's from 'CarrierDelay'
+# Exclude 0 entries from 'CarrierDelay'
+# Group 'CarrierDelay' by month and find the average
+df_delay_carrier_0 = df_2008s.dropna(subset=['CarrierDelay'])
+df_delay_carrier_0 = df_delay_carrier_0[df_delay_carrier_0['CarrierDelay']!=0]
+df_delay_carrier_1 = df_delay_carrier_0.groupby(['Month'])['CarrierDelay'].mean()
