@@ -774,3 +774,11 @@ df_ld_weekday.sort_values(['LateAircraftDelay'], ascending = False)
 # In[108]:
 # average cancellations by month and cancellations code
 df_cancelled_mv1 = df_2008s.groupby(['Month', 'CancellationCode'])['Cancelled'].count()
+
+
+# In[109]:
+# convert to data set
+# convert numbered months to lettered months
+df_cancelled_mv1 = df_cancelled_mv1.reset_index()
+df_cancelled_mv1['Month'] = df_cancelled_mv1['Month'].apply(lambda x: calendar.month_abbr[x])
+
