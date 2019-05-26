@@ -817,3 +817,9 @@ df_delay_carrier_1
 df_delay_weather_0 = df_2008s.dropna(subset=['WeatherDelay'])
 df_delay_weather_0 = df_delay_weather_0[df_delay_weather_0['WeatherDelay']!=0]
 df_delay_weather_1 = df_delay_weather_0.groupby(['Month'])['WeatherDelay'].mean()
+
+
+# In[114]:
+# convert to data set
+df_delay_weather_1 = df_delay_weather_1.reset_index()
+df_delay_weather_1
