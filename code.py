@@ -802,3 +802,9 @@ ax.set_title('Types of Flight Cancellations by Month');
 df_delay_carrier_0 = df_2008s.dropna(subset=['CarrierDelay'])
 df_delay_carrier_0 = df_delay_carrier_0[df_delay_carrier_0['CarrierDelay']!=0]
 df_delay_carrier_1 = df_delay_carrier_0.groupby(['Month'])['CarrierDelay'].mean()
+
+
+# In[112]:
+# convert to data set
+df_delay_carrier_1 = df_delay_carrier_1.reset_index()
+df_delay_carrier_1
