@@ -808,3 +808,12 @@ df_delay_carrier_1 = df_delay_carrier_0.groupby(['Month'])['CarrierDelay'].mean(
 # convert to data set
 df_delay_carrier_1 = df_delay_carrier_1.reset_index()
 df_delay_carrier_1
+
+
+# In[113]:
+# Drop NaN's from 'WeatherDelay'
+# Exclude 0 entries from 'WeatherDelay'
+# Group 'WeatherDelay' by month and find the average
+df_delay_weather_0 = df_2008s.dropna(subset=['WeatherDelay'])
+df_delay_weather_0 = df_delay_weather_0[df_delay_weather_0['WeatherDelay']!=0]
+df_delay_weather_1 = df_delay_weather_0.groupby(['Month'])['WeatherDelay'].mean()
