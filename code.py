@@ -853,3 +853,12 @@ df_delay_NAS_1 = df_delay_NAS_0.groupby(['Month'])['NASDelay'].mean()
 # convert to data set
 df_delay_NAS_1 = df_delay_NAS_1.reset_index()
 df_delay_NAS_1
+
+
+# In[119]:
+# Drop NaN's from 'SecurityDelay'
+# Exclude 0 entries from 'SecurityDelay'
+# Group 'SecurityDelay' by month and find the average
+df_delay_security_0 = df_2008s.dropna(subset=['SecurityDelay'])
+df_delay_security_0 = df_delay_security_0[df_delay_security_0['SecurityDelay']!=0]
+df_delay_security_1 = df_delay_security_0.groupby(['Month'])['SecurityDelay'].mean()
