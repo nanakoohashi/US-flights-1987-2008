@@ -877,3 +877,9 @@ df_delay_security_1
 df_delay_aircraft_0 = df_2008s.dropna(subset=['LateAircraftDelay'])
 df_delay_aircraft_0 = df_delay_aircraft_0[df_delay_aircraft_0['LateAircraftDelay']!=0]
 df_delay_aircraft_1 = df_delay_aircraft_0.groupby(['Month'])['LateAircraftDelay'].mean()
+
+
+# In[222]:
+# convert to data set
+df_delay_aircraft_1 = df_delay_aircraft_1.reset_index()
+df_delay_aircraft_1
