@@ -868,3 +868,12 @@ df_delay_security_1 = df_delay_security_0.groupby(['Month'])['SecurityDelay'].me
 # convert to data set
 df_delay_security_1 = df_delay_security_1.reset_index()
 df_delay_security_1
+
+
+# In[221]:
+# Drop NaN's from 'LateAircraftDelay'
+# Exclude 0 entries from 'LateAircraftDelay'
+# Group 'LateAircraftDelay' by month and find the average
+df_delay_aircraft_0 = df_2008s.dropna(subset=['LateAircraftDelay'])
+df_delay_aircraft_0 = df_delay_aircraft_0[df_delay_aircraft_0['LateAircraftDelay']!=0]
+df_delay_aircraft_1 = df_delay_aircraft_0.groupby(['Month'])['LateAircraftDelay'].mean()
