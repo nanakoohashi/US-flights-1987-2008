@@ -883,3 +883,8 @@ df_delay_aircraft_1 = df_delay_aircraft_0.groupby(['Month'])['LateAircraftDelay'
 # convert to data set
 df_delay_aircraft_1 = df_delay_aircraft_1.reset_index()
 df_delay_aircraft_1
+
+
+# In[223]:
+# merge 
+df_delay = pd.merge(df_delay_carrier_1, df_delay_weather_1, on='Month', how='outer')
