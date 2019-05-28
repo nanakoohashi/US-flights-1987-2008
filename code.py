@@ -888,3 +888,8 @@ df_delay_aircraft_1
 # In[223]:
 # merge 
 df_delay = pd.merge(df_delay_carrier_1, df_delay_weather_1, on='Month', how='outer')
+
+
+# In[224]:
+# merge
+df_delay = pd.merge(df_delay, df_delay_NAS_1, on='Month', how='outer')
