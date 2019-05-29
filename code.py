@@ -899,3 +899,7 @@ df_delay = pd.merge(df_delay, df_delay_NAS_1, on='Month', how='outer')
 # merge
 df_delay = pd.merge(df_delay, df_delay_security_1, on='Month', how='outer')
 
+
+# In[226]:
+# merge
+df_delay = pd.merge(df_delay, df_delay_aircraft_1, on='Month', how='outer')
