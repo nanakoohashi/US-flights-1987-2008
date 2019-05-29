@@ -909,3 +909,16 @@ df_delay = pd.merge(df_delay, df_delay_aircraft_1, on='Month', how='outer')
 # convert numbered months to lettered months
 df_delay['Month'] = df_delay['Month'].apply(lambda x: calendar.month_abbr[x])
 df_delay
+
+
+# In[228]:
+# plot 
+ax = df_delay.plot(x="Month", y=["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"], kind="line", title='Average Flight Delay Length by Month', figsize=(15,8))
+plt.xticks(range(0,12),df_delay["Month"])
+leg = plt.legend().get_texts()
+leg[0].set_text('Carrier Delay')
+leg[1].set_text('Weather Delay')
+leg[2].set_text('NAS Delay')
+leg[3].set_text('Security Delay')
+leg[4].set_text('Late Aircraft Delay')
+ax.set_ylabel('Average Delay (min)');
