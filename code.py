@@ -903,3 +903,9 @@ df_delay = pd.merge(df_delay, df_delay_security_1, on='Month', how='outer')
 # In[226]:
 # merge
 df_delay = pd.merge(df_delay, df_delay_aircraft_1, on='Month', how='outer')
+
+
+# In[227]:
+# convert numbered months to lettered months
+df_delay['Month'] = df_delay['Month'].apply(lambda x: calendar.month_abbr[x])
+df_delay
