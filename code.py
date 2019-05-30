@@ -922,3 +922,8 @@ leg[2].set_text('NAS Delay')
 leg[3].set_text('Security Delay')
 leg[4].set_text('Late Aircraft Delay')
 ax.set_ylabel('Average Delay (min)');
+
+
+# >Weather and late carrier delays have the longest average duration of delay of total monthly flights amd security has the shortest duration of delay of total monthly flights.
+
+
