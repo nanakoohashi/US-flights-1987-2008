@@ -864,13 +864,13 @@ df_delay_security_0 = df_delay_security_0[df_delay_security_0['SecurityDelay']!=
 df_delay_security_1 = df_delay_security_0.groupby(['Month'])['SecurityDelay'].mean()
 
 
-# In[220]:
+# In[120]:
 # convert to data set
 df_delay_security_1 = df_delay_security_1.reset_index()
 df_delay_security_1
 
 
-# In[221]:
+# In[121]:
 # Drop NaN's from 'LateAircraftDelay'
 # Exclude 0 entries from 'LateAircraftDelay'
 # Group 'LateAircraftDelay' by month and find the average
@@ -879,39 +879,39 @@ df_delay_aircraft_0 = df_delay_aircraft_0[df_delay_aircraft_0['LateAircraftDelay
 df_delay_aircraft_1 = df_delay_aircraft_0.groupby(['Month'])['LateAircraftDelay'].mean()
 
 
-# In[222]:
+# In[122]:
 # convert to data set
 df_delay_aircraft_1 = df_delay_aircraft_1.reset_index()
 df_delay_aircraft_1
 
 
-# In[223]:
+# In[123]:
 # merge 
 df_delay = pd.merge(df_delay_carrier_1, df_delay_weather_1, on='Month', how='outer')
 
 
-# In[224]:
+# In[124]:
 # merge
 df_delay = pd.merge(df_delay, df_delay_NAS_1, on='Month', how='outer')
 
 
-# In[225]:
+# In[125]:
 # merge
 df_delay = pd.merge(df_delay, df_delay_security_1, on='Month', how='outer')
 
 
-# In[226]:
+# In[126]:
 # merge
 df_delay = pd.merge(df_delay, df_delay_aircraft_1, on='Month', how='outer')
 
 
-# In[227]:
+# In[127]:
 # convert numbered months to lettered months
 df_delay['Month'] = df_delay['Month'].apply(lambda x: calendar.month_abbr[x])
 df_delay
 
 
-# In[228]:
+# In[128]:
 # plot 
 ax = df_delay.plot(x="Month", y=["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"], kind="line", title='Average Flight Delay Length by Month', figsize=(15,8))
 plt.xticks(range(0,12),df_delay["Month"])
@@ -928,3 +928,10 @@ ax.set_ylabel('Average Delay (min)');
 
 # #### Percentage of Flights Delayed by Month
 
+
+# In[129]:
+# calculate percentage of flight delayed by month
+df_delay2 = df_delay.copy()
+df_delay3 = df_delay2[["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"]].div(df_flights_by_month.Total_Flights, axis=0)
+df_delay3.insert(0, "Month", df_delay2["Month"], True)
+df_delay3
