@@ -935,3 +935,16 @@ df_delay2 = df_delay.copy()
 df_delay3 = df_delay2[["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"]].div(df_flights_by_month.Total_Flights, axis=0)
 df_delay3.insert(0, "Month", df_delay2["Month"], True)
 df_delay3
+
+
+# In[130]:
+# plot
+ax = df_delay3.plot(x="Month", y=["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"], kind="line", title='Percent of Flights Delayed by Type and Month', figsize=(15,8))
+plt.xticks(range(0,12),df_delay["Month"])
+leg = plt.legend().get_texts()
+leg[0].set_text('Carrier Delay')
+leg[1].set_text('Weather Delay')
+leg[2].set_text('NAS Delay')
+leg[3].set_text('Security Delay')
+leg[4].set_text('Late Aircraft Delay')
+ax.set_ylabel('Percent of Flights Delayed');
