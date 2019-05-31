@@ -951,4 +951,6 @@ ax.set_ylabel('Percent of Flights Delayed');
 
 
 # >Results were similar to that of types of delays by month where weather and late carrier delays have the highest percentage of delays of total monthly flights and security has the least percentage of delays of total monthly flights.
+
+# #### Types of Cancellations by Day of Week
 # In[131]:
