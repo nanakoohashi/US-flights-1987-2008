@@ -958,3 +958,10 @@ ax.set_ylabel('Percent of Flights Delayed');
 # In[131]:
 # count cancellations by day of week and cancellation code
 df_cancelled_mv = df_2008s.groupby(['DayOfWeek', 'CancellationCode'])['Cancelled'].count()
+
+
+# In[132]:
+# convert to data set
+# convert numbered day of week to lettered day of week
+df_cancelled_mv = df_cancelled_mv.reset_index()
+df_cancelled_mv['DayOfWeek'] = df_cancelled_mv['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
