@@ -948,3 +948,7 @@ leg[2].set_text('NAS Delay')
 leg[3].set_text('Security Delay')
 leg[4].set_text('Late Aircraft Delay')
 ax.set_ylabel('Percent of Flights Delayed');
+
+
+# >Results were similar to that of types of delays by month where weather and late carrier delays have the highest percentage of delays of total monthly flights and security has the least percentage of delays of total monthly flights.
+# In[131]:
