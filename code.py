@@ -965,3 +965,12 @@ df_cancelled_mv = df_2008s.groupby(['DayOfWeek', 'CancellationCode'])['Cancelled
 # convert numbered day of week to lettered day of week
 df_cancelled_mv = df_cancelled_mv.reset_index()
 df_cancelled_mv['DayOfWeek'] = df_cancelled_mv['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
+
+
+# In[133]:
+# plot
+plt.figure(figsize=(15,8))
+ax = sb.barplot(data = df_cancelled_mv, x = 'DayOfWeek', y = 'Cancelled', hue = 'CancellationCode')
+ax.legend(loc='upper center', bbox_to_anchor=(1.1, 0.8), shadow=True, ncol=1, title = 'Types of Cancellations')
+ax.set_title('Types of Flight Cancellations by Day of Week')
+ax.set_xlabel('Day of Week');
