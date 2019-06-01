@@ -974,3 +974,6 @@ ax = sb.barplot(data = df_cancelled_mv, x = 'DayOfWeek', y = 'Cancelled', hue = 
 ax.legend(loc='upper center', bbox_to_anchor=(1.1, 0.8), shadow=True, ncol=1, title = 'Types of Cancellations')
 ax.set_title('Types of Flight Cancellations by Day of Week')
 ax.set_xlabel('Day of Week');
+
+
+# >Weather is the most common weekly cause for flight cancellations, followed by carrier. Security cancellations are the least common cause for cancellations for all days of the week.
