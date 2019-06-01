@@ -979,3 +979,13 @@ ax.set_xlabel('Day of Week');
 # >Weather is the most common weekly cause for flight cancellations, followed by carrier. Security cancellations are the least common cause for cancellations for all days of the week.
 
 # #### Average Length of Delays by Day of Week
+
+
+# In[134]:
+# Drop NaN's from 'CarrierDelay'
+# Exclude 0 entries from 'CarrierDelay'
+# Group 'CarrierDelay' by day of week and find the average
+df_delay_car_0 = df_2008s.dropna(subset=['CarrierDelay'])
+df_delay_car_0 = df_delay_car_0[df_delay_car_0['CarrierDelay']!=0]
+df_delay_car_1 = df_delay_car_0.groupby(['DayOfWeek'])['CarrierDelay'].mean()
+
