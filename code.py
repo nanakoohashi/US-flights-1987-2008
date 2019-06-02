@@ -989,3 +989,8 @@ df_delay_car_0 = df_2008s.dropna(subset=['CarrierDelay'])
 df_delay_car_0 = df_delay_car_0[df_delay_car_0['CarrierDelay']!=0]
 df_delay_car_1 = df_delay_car_0.groupby(['DayOfWeek'])['CarrierDelay'].mean()
 
+
+# In[135]:
+# convert to data set
+df_delay_car_1 = df_delay_car_1.reset_index()
+df_delay_car_1
