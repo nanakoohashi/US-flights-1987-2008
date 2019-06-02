@@ -1003,3 +1003,10 @@ df_delay_car_1
 df_delay_wea_0 = df_2008s.dropna(subset=['WeatherDelay'])
 df_delay_wea_0 = df_delay_wea_0[df_delay_wea_0['WeatherDelay']!=0]
 df_delay_wea_1 = df_delay_wea_0.groupby(['DayOfWeek'])['WeatherDelay'].mean()
+
+
+# In[137]:
+# convert to data set
+df_delay_wea_1 = df_delay_wea_1.reset_index()
+df_delay_wea_1
+
