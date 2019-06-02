@@ -1010,3 +1010,11 @@ df_delay_wea_1 = df_delay_wea_0.groupby(['DayOfWeek'])['WeatherDelay'].mean()
 df_delay_wea_1 = df_delay_wea_1.reset_index()
 df_delay_wea_1
 
+
+# In[138]
+# Drop NaN's from 'NASDelay'
+# Exclude 0 entries from 'NASDelay'
+# Group 'NASDelay' by day of week and find the average
+df_delay_NAS1_0 = df_2008s.dropna(subset=['NASDelay'])
+df_delay_NAS1_0 = df_delay_NAS1_0[df_delay_NAS1_0['NASDelay']!=0]
+df_delay_NAS1_1 = df_delay_NAS1_0.groupby(['DayOfWeek'])['NASDelay'].mean()
