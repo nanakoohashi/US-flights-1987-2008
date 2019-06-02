@@ -994,3 +994,12 @@ df_delay_car_1 = df_delay_car_0.groupby(['DayOfWeek'])['CarrierDelay'].mean()
 # convert to data set
 df_delay_car_1 = df_delay_car_1.reset_index()
 df_delay_car_1
+
+
+# In[136]:
+# Drop NaN's from 'WeatherDelay'
+# Exclude 0 entries from 'WeatherDelay'
+# Group 'WeatherDelay' by day of week and find the average
+df_delay_wea_0 = df_2008s.dropna(subset=['WeatherDelay'])
+df_delay_wea_0 = df_delay_wea_0[df_delay_wea_0['WeatherDelay']!=0]
+df_delay_wea_1 = df_delay_wea_0.groupby(['DayOfWeek'])['WeatherDelay'].mean()
