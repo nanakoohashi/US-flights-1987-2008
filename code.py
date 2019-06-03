@@ -1018,3 +1018,9 @@ df_delay_wea_1
 df_delay_NAS1_0 = df_2008s.dropna(subset=['NASDelay'])
 df_delay_NAS1_0 = df_delay_NAS1_0[df_delay_NAS1_0['NASDelay']!=0]
 df_delay_NAS1_1 = df_delay_NAS1_0.groupby(['DayOfWeek'])['NASDelay'].mean()
+
+
+# In[139]
+# convert to data set
+df_delay_NAS1_1 = df_delay_NAS1_1.reset_index()
+df_delay_NAS1_1
