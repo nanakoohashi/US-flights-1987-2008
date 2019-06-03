@@ -1024,3 +1024,12 @@ df_delay_NAS1_1 = df_delay_NAS1_0.groupby(['DayOfWeek'])['NASDelay'].mean()
 # convert to data set
 df_delay_NAS1_1 = df_delay_NAS1_1.reset_index()
 df_delay_NAS1_1
+
+
+# In[140]:
+# Drop NaN's from 'SecurityDelay'
+# Exclude 0 entries from 'SecurityDelay'
+# Group 'SecurityDelay' by day of week and find the average
+df_delay_sec_0 = df_2008s.dropna(subset=['SecurityDelay'])
+df_delay_sec_0 = df_delay_sec_0[df_delay_sec_0['SecurityDelay']!=0]
+df_delay_sec_1 = df_delay_sec_0.groupby(['DayOfWeek'])['SecurityDelay'].mean()
