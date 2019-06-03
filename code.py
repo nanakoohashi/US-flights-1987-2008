@@ -1039,3 +1039,12 @@ df_delay_sec_1 = df_delay_sec_0.groupby(['DayOfWeek'])['SecurityDelay'].mean()
 # convert to data set
 df_delay_sec_1 = df_delay_sec_1.reset_index()
 df_delay_sec_1
+
+
+# In[142]:
+# Drop NaN's from 'LateAircraftDelay'
+# Exclude 0 entries from 'LateAircraftDelay'
+# Group 'LateAircraftDelay' by day of week and find the average
+df_delay_air_0 = df_2008s.dropna(subset=['LateAircraftDelay'])
+df_delay_air_0 = df_delay_air_0[df_delay_air_0['LateAircraftDelay']!=0]
+df_delay_air_1 = df_delay_air_0.groupby(['DayOfWeek'])['LateAircraftDelay'].mean()
