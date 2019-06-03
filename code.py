@@ -1033,3 +1033,9 @@ df_delay_NAS1_1
 df_delay_sec_0 = df_2008s.dropna(subset=['SecurityDelay'])
 df_delay_sec_0 = df_delay_sec_0[df_delay_sec_0['SecurityDelay']!=0]
 df_delay_sec_1 = df_delay_sec_0.groupby(['DayOfWeek'])['SecurityDelay'].mean()
+
+
+# In[141]:
+# convert to data set
+df_delay_sec_1 = df_delay_sec_1.reset_index()
+df_delay_sec_1
