@@ -1048,3 +1048,9 @@ df_delay_sec_1
 df_delay_air_0 = df_2008s.dropna(subset=['LateAircraftDelay'])
 df_delay_air_0 = df_delay_air_0[df_delay_air_0['LateAircraftDelay']!=0]
 df_delay_air_1 = df_delay_air_0.groupby(['DayOfWeek'])['LateAircraftDelay'].mean()
+
+
+# In[143]:
+# convert to data set
+df_delay_air_1 = df_delay_air_1.reset_index()
+df_delay_air_1
