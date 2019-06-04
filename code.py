@@ -1060,3 +1060,8 @@ df_delay_air_1
 # merge
 df_delay1 = pd.merge(df_delay_car_1, df_delay_wea_1, on='DayOfWeek', how='outer')
 df_delay1
+
+
+# In[145]:
+# merge
+df_delay1 = pd.merge(df_delay1, df_delay_NAS1_1, on='DayOfWeek', how='outer')
