@@ -1054,3 +1054,9 @@ df_delay_air_1 = df_delay_air_0.groupby(['DayOfWeek'])['LateAircraftDelay'].mean
 # convert to data set
 df_delay_air_1 = df_delay_air_1.reset_index()
 df_delay_air_1
+
+
+# In[144]:
+# merge
+df_delay1 = pd.merge(df_delay_car_1, df_delay_wea_1, on='DayOfWeek', how='outer')
+df_delay1
