@@ -1065,3 +1065,8 @@ df_delay1
 # In[145]:
 # merge
 df_delay1 = pd.merge(df_delay1, df_delay_NAS1_1, on='DayOfWeek', how='outer')
+
+
+# In[146]:
+# merge
+df_delay1 = pd.merge(df_delay1, df_delay_sec_1, on='DayOfWeek', how='outer')
