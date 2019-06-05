@@ -1094,3 +1094,7 @@ leg[3].set_text('Security Delay')
 leg[4].set_text('Late Aircraft Delay')
 ax.set_ylabel('Average Delay (min)')
 ax.set_xlabel('Day of Week');
+
+
+# In[150]:
+# Weather and late carrier delays had the longest average delay length. Security delays had the shortest average delay length for all days of the week.
