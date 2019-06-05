@@ -1080,3 +1080,17 @@ df_delay1 = pd.merge(df_delay1, df_delay_air_1, on='DayOfWeek', how='outer')
 # In[148]:
 # convert numbered days of week to lettered days of week
 df_delay1['DayOfWeek'] = df_delay1['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
+
+
+# In[149]:
+# plot
+ax = df_delay1.plot(x="DayOfWeek", y=["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"], kind="line", title='Average Flight Delay Length by Day Of Week', figsize=(15,8))
+plt.xticks(range(0,7),df_delay1["DayOfWeek"])
+leg = plt.legend().get_texts()
+leg[0].set_text('Carrier Delay')
+leg[1].set_text('Weather Delay')
+leg[2].set_text('NAS Delay')
+leg[3].set_text('Security Delay')
+leg[4].set_text('Late Aircraft Delay')
+ax.set_ylabel('Average Delay (min)')
+ax.set_xlabel('Day of Week');
