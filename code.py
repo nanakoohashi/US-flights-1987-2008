@@ -1075,3 +1075,8 @@ df_delay1 = pd.merge(df_delay1, df_delay_sec_1, on='DayOfWeek', how='outer')
 # In[147]:
 # merge
 df_delay1 = pd.merge(df_delay1, df_delay_air_1, on='DayOfWeek', how='outer')
+
+
+# In[148]:
+# convert numbered days of week to lettered days of week
+df_delay1['DayOfWeek'] = df_delay1['DayOfWeek'].apply(lambda x: calendar.day_abbr[x-1])
