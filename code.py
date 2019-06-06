@@ -1100,4 +1100,9 @@ ax.set_xlabel('Day of Week');
 
 # #### Percentage of Flights Delayed by Day of Week
 
- # In[150]:
+# In[150]:
+# Calculate percent of flights delayed by day of week
+df_delayw = df_delay1.copy()
+df_delayw1 = df_delayw[["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"]].div(df_day_value_counts.Total_Flights, axis=0)
+df_delayw1.insert(0, "DayOfWeek", df_delay1["DayOfWeek"], True)
+df_delayw1
