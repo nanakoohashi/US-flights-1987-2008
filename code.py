@@ -1106,3 +1106,17 @@ df_delayw = df_delay1.copy()
 df_delayw1 = df_delayw[["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"]].div(df_day_value_counts.Total_Flights, axis=0)
 df_delayw1.insert(0, "DayOfWeek", df_delay1["DayOfWeek"], True)
 df_delayw1
+
+
+# In[151]:
+# plot
+ax = df_delayw1.plot(x="DayOfWeek", y=["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"], kind="line", title='Percent of Flights Delayed by Type and Day of Week', figsize=(15,8))
+plt.xticks(range(0,7),df_delayw1["DayOfWeek"])
+leg = plt.legend().get_texts()
+leg[0].set_text('Carrier Delay')
+leg[1].set_text('Weather Delay')
+leg[2].set_text('NAS Delay')
+leg[3].set_text('Security Delay')
+leg[4].set_text('Late Aircraft Delay')
+ax.set_ylabel('Percent of Flights Delayed')
+ax.set_xlabel('Day of Week');
