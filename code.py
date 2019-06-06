@@ -1120,3 +1120,8 @@ leg[3].set_text('Security Delay')
 leg[4].set_text('Late Aircraft Delay')
 ax.set_ylabel('Percent of Flights Delayed')
 ax.set_xlabel('Day of Week');
+
+
+# >Results were similar to that of types of delays by week where weather and late carrier delays have the highest percentage of delays of total weekly flights and security has the least percentage of delays of total weekly flights.
+
+
