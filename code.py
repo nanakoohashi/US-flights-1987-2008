@@ -1125,3 +1125,4 @@ ax.set_xlabel('Day of Week');
 # >Results were similar to that of types of delays by week where weather and late carrier delays have the highest percentage of delays of total weekly flights and security has the least percentage of delays of total weekly flights.
 
 # ### Were there any interesting or surprising interactions between features?
+# > Security delays and cancellations are very infrequent compared with the other types of delays and cancellations.
