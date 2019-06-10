@@ -2,7 +2,19 @@
 # Flights - README
 
 ## Summary
->This dataset reports flights in the United States, including carriers, arrival and departure delays, and reasons for delays, for 2008. This dataset was obtained from the **RITA** (Research and Technology Bureau of Transportation Statistics) found [here](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp).
+This dataset reports flights in the United States, including carriers, arrival and departure delays, and reasons for delays, for 2008. This dataset was obtained from the **RITA** (Research and Technology Bureau of Transportation Statistics) found [here](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp).
+
+
+## Getting Started
+### Dependencies
+Windows 10
+
+### Libraries
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- calendar
 
 
 ## Steps
