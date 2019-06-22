@@ -2,8 +2,7 @@
 # Flights - README
 
 ## Summary
-This dataset reports flights in the United States, including carriers, arrival and departure delays, and reasons for delays, for 2008. This dataset was obtained from the **RITA** (Research and Technology Bureau of Transportation Statistics) found [here](https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp).
-
+This dataset reports the national estimates of homelessness by state from 2007 - 2018. Estimates of homeless veterans are included from the beginning of 2011. This dataset was obtained from **HUD EXCHANGE** (https://www.hudexchange.info/resource/3031/pit-and-hic-data-since-2007/).
 
 ## Getting Started
 ### Dependencies
