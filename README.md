@@ -6,7 +6,8 @@ This dataset reports flights in the United States, including carriers, arrival a
 
 ## Getting Started
 ### Dependencies
-Windows 10
+- Windows 10
+- Python 3
 
 ### Libraries
 - pandas
