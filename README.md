@@ -8,6 +8,7 @@ This dataset reports flights in the United States, including carriers, arrival a
 ### Dependencies
 - Windows 10
 - Python 3
+- Tableau 2019.2
 
 ### Libraries
 - pandas
